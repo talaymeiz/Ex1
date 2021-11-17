@@ -12,14 +12,18 @@ class Building:
     #         self._elevators.append(elev)
 
     def __init__(self, file_name: str) -> None:
-        with open(file_name, "r") as f:
-            dict_building = json.load(f)
-            self._minFloor = dict_building['_minFloor']
-            self._maxFloor = dict_building['_maxFloor']
-            self._elevators = []
-            for i in dict_building['_elevators']:
-                elev = Elevator(i)
-                self._elevators.append(elev)
+        try:
+            with open(file_name, "r") as f:
+                dict_building = json.load(f)
+                self._minFloor = dict_building['_minFloor']
+                self._maxFloor = dict_building['_maxFloor']
+                self._elevators = []
+                for i in dict_building['_elevators']:
+                    elev = Elevator(i)
+                    self._elevators.append(elev)
+        except json.decoder.JSONDecodeError:
+            print("String could not be converted to JSON")
+
 
     def __str__(self):
         elevators = ""

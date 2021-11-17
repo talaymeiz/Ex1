@@ -6,6 +6,7 @@ class Call:
         self.src = int(x[2])
         self.dst = int(x[3])
         self.elev = int(x[5])
+        self.direction = 0
         if self.dst - self.src > 0:
             self.direction = 1
         else:

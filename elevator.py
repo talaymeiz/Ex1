@@ -31,7 +31,7 @@ class Elevator:
         self._startTime = float(_dict['_startTime'])
         self._stopTime = float(_dict['_stopTime'])
         self.wait = self._speed * 3
-        self.lastcall = None
+        self.last_call = None
         self.curr_time = 0
         self.flag = False
 
@@ -41,3 +41,6 @@ class Elevator:
 
     def stoptime(self):
         return self._stopTime + self._openTime + self._closeTime + self._startTime
+
+    def __lt__(self, other):
+        return self._speed > other._speed
