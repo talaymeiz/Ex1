@@ -1,6 +1,6 @@
 import unittest
 from call import Call
-from main import worth
+from Ex1 import worth
 
 
 class MyTestCase(unittest.TestCase):

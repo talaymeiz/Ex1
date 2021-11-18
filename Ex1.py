@@ -80,7 +80,7 @@ def algo(building: Building = None, calls: list = [], file_name: str = ''):
     last_call = None
 
     for call in calls:
-        if worth(call, last_call, elev_in_flag):
+        if worth(call, last_call):
             call.elev = building._elevators[flag]._id
             building._elevators[flag].last_call = call
         else:
@@ -102,17 +102,17 @@ def worth_long(call: Call = None, listelev: list = [], elev_in_flag: Elevator = 
 
 
 if __name__ == '__main__':
-    # calls = read_calls(r'Calls_c.csv')
-    # building = Building(r'B3.json')
-    # output_file = 'output.csv'
+    calls = read_calls(r'Calls_c.csv')
+    building = Building(r'B3.json')
+    output_file = 'output.csv'
 
-    building_name = sys.argv[1]
-    calls_name = sys.argv[2]
-    output_name = sys.argv[3]
-
-    calls = read_calls(calls_name)
-    building = Building(building_name)
-
-    algo(building, calls, output_name)
-    # algo(building, calls, output_file)
+    # building_name = sys.argv[1]
+    # calls_name = sys.argv[2]
+    # output_name = sys.argv[3]
+    #
+    # calls = read_calls(calls_name)
+    # building = Building(building_name)
+    #
+    # algo(building, calls, output_name)
+    algo(building, calls, output_file)
 
