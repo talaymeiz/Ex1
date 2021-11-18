@@ -37,6 +37,24 @@ division into segments by calls and division into dynamic segments.
 5. If the current call does not match the elevator of the previous call, the current call elevator will be the next elevator
 6. Move on to the next call in the list.
 
+
+### *Help Functions:*
+
+- read_calls() :<br>The function uses csv.reader to read the calls csv. Then it uses the constuctor that will build a new call from each row and append the call to a list of calls. 
+
+- output() :<br>The function uses csv.writer to write each call into a csv file.
+
+- elev_flag() :<br>The function promotes the index of the elevators.
+
+- worth() :<br>The function compares the current call to the previous call in times and distance and decides whether to allocate them with the same elevator.
+
+- worth_long() :<br>The function compares the current call to the previous call in times and distance and decides whether to allocate them with the same elevator, while the call's distance between source floor to destination floor is more than 70 floors.
+
+- time_dist() :<br>Calculation of travel time between two floors including stop, start, opening and closing times.
+
+- algo() :<br>our algorithm as described in Offline Algorithm title.
+
+
 ### *Average Waiting Time:*
 
 
