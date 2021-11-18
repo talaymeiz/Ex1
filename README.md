@@ -51,8 +51,15 @@ Calls d | -- | -- | 554.016 | 247.884 | 72.108
 
 Uncompleted Calls | B1 | B2 | B3 | B4 | B5
 --- | --- | --- | --- |--- |---
-Calls a | 0 | 0 | 0 | ? | 0
+Calls a | 0 | 0 | 0 | 0 | 0
 Calls b | -- | -- | 160 | 31 | 0 
 Calls c | -- | -- | 121 | 31 | 0
 Calls d | -- | -- | 66 | 14 | 0 
+
+<br>
+In our project there are no classes that inherit or implement other classes.<br>
+Therefor the UML diagram will be the following.<br>
+
+### *UML Diagram:*
+![uml](https://user-images.githubusercontent.com/80401712/142411431-8c47c5c9-519c-416b-8cf8-87c05861918b.png)
 
